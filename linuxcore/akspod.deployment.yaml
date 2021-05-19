@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: core-dev01
+  labels:
+    app: core-dev01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: core-dev01
+  template:
+    metadata:
+      labels:
+        app: core-dev01
+    spec:
+      containers:
+        - name: core-dev01
+          image: kubecontainer45.azurecr.io/sample:#{Build.BuildId}#
+          ports:
+            - containerPort: 80
