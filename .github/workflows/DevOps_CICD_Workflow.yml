@@ -22,7 +22,7 @@ jobs:
       - name: Deploy to Azure Web App (Dev)
         uses: azure/webapps-deploy@v2
         with:
-          app-name: deploy-to-webapp-dev
+          app-name: dockerimagetest
           publish-profile: ${{ secrets.PUBLISH_PROFILE_DEV_SERVER }}
           images: 'imagedeployment:latest'   
         
