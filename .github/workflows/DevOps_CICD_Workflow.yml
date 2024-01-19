@@ -3,7 +3,7 @@ name: Deploy to Dev and QA
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy-to-dev:
