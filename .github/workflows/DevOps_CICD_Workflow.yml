@@ -18,3 +18,10 @@ jobs:
         
       - name: Build Docker Image
         run: docker build -t imagedeployment:latest .
+
+      - name: Deploy to Azure Web App (Dev)
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: deploy-to-webapp-dev
+          images: 'imagedeployment:latest'   
+        
