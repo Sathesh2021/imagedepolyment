@@ -23,5 +23,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: deploy-to-webapp-dev
+          publish-profile: ${{ secrets.PUBLISH_PROFILE_DEV_SERVER }}
           images: 'imagedeployment:latest'   
         
